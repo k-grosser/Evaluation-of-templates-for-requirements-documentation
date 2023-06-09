@@ -204,7 +204,7 @@ Related Student Thesis
 
 ## How to Cite
 
-Katharina Großer, Marina Rukavitsyna, Jan Jürjens. "Evaluation of Templates for Requirements Documentation: Data-set and Sources", 2023, DOI: 
+Katharina Großer, Marina Rukavitsyna, Jan Jürjens. "Evaluation of Templates for Requirements Documentation: Data-set and Sources", 2023, DOI: 10.5281/zenodo.8020672.
 
 ## License
 
