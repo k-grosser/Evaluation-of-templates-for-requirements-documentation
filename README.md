@@ -12,7 +12,7 @@ The repository contains different artifacts:
   - "ECSS E60-30" is an ECSS standard from the aerospace domain.  
   - "TSS" (Time Sheet System) is a specification of a work hour management system for student reasearch assistents at universities*. (The requirements loosely follow the MASTeR Templates)  
   - "EVS" (Electronic Voting System) is a specification of a system for electronic polls in the university context*. (The requirements loosely follow the MASTeR Templates)
-  - (*both university projects (TSS & EVS) are actually implemented in practical courses based on these requirements)
+  - (*both university projects (TSS & EVS) are actually implemented in practical courses at University of Koblenz-Landau and University of Koblenz based on these requirements)
   - Each of the above requirements sets **rephrased into five different template notations** respectively (in total 1764 requirements)
     - "Easy Approach to Requirements Syntax (EARS)"
     - "Mustergültige Anforderungen - Das SOPHIST Templates für Requirements (MASTeR)"
@@ -34,7 +34,7 @@ The repository contains two folders:
 
 - Source: Python code (Quality metrics.ipynb) to evaluate 19 particular metrics, details under "Usage Instructions". 
 - Data: contains the files with the actual data
-  -  metric_definitions_and_results.pdf, detailed definition tables for quality metrics and data items, as well as underlying guideline rules (+ comparison of five phrasing guidelines) and results in effects sizes comparing the five template systems with free text.
+  -  metric_definitions_and_results.pdf, detailed definition tables for quality metrics and data items, as well as underlying guideline rules (+ comparison of five phrasing guidelines), explanations of statistical interpretations, and results in effects sizes comparing the five template systems with free text.
   -  two sunburst diagrams "QualityAttributes.png" and "RulesPerGuideline.png" illustrating the attribution of evaluated metrics to quality attributes and the conformance to phrasing guidelines as described in "metric_definitions_and_results.pdf"
   - TemplateComparisonAnalytics.xlsx, the workbook contains several different data sheets
     - a sheet per document phrasing variant named after the document (FLEX, CS_E_50, ECSS_E60-30, TSS, EVS) and 5 random groups (Random1, ..)
