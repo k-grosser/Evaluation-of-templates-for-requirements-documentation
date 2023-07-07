@@ -1,18 +1,19 @@
 # Evaluation of Templates for Requirements Documentation 
 
-This repository contains data and code related to experimentation on a compartive evaluation of different template notations for requirements documentation in semi-formal natural language.
+This repository contains data and code related to experimentation on a comparative evaluation of different template notations for requirements documentation in semi-formal natural language.
 
 ## Summary of Artifact 
 
 The repository contains different artifacts:
 
 - A **corpus of natural language requirements** from five different projects in different domains (249 requirements):
-  - "FLEX" is a system level specifiaction from a space flight/satellite project from ESA. 
-  - "CS E 50" (Certification Specifications for Engines) is an EASA standard related to the aviation/aerospace domain.  
-  - "ECSS E60-30" is an ECSS standard from the aerospace domain.  
-  - "TSS" (Time Sheet System) is a specification of a work hour management system for student reasearch assistents at universities*. (The requirements loosely follow the MASTeR Templates)  
+  - "FLEX" is a system level specification from a space flight/satellite project from [ESA](https://www.esa.int/). 
+  - "CS E 50" (Certification Specifications for Engines) is an [EASA](https://www.easa.europa.eu/en) standard related to the aviation/aerospace domain.  
+  - "ECSS E60-30" is an [ECSS](https://ecss.nl/) standard from the aerospace domain.  
+  - "TSS" (Time Sheet System) is a specification of a work hour management system for student research assistants at universities*. (The requirements loosely follow the MASTeR Templates)  
   - "EVS" (Electronic Voting System) is a specification of a system for electronic polls in the university context*. (The requirements loosely follow the MASTeR Templates)
-  - (*both university projects (TSS & EVS) are actually implemented in practical courses at University of Koblenz-Landau and University of Koblenz based on these requirements)
+  
+    *both university projects (TSS & EVS) are actually implemented in practical courses at University of Koblenz-Landau and [University of Koblenz](https://www.uni-koblenz.de) based on these requirements
   - Each of the above requirements sets **rephrased into five different template notations** respectively (in total 1764 requirements)
     - "Easy Approach to Requirements Syntax (EARS)"
     - "Mustergültige Anforderungen - Das SOPHIST Templates für Requirements (MASTeR)"
@@ -39,14 +40,16 @@ The repository contains two folders:
   - TemplateComparisonAnalytics.xlsx, the workbook contains several different data sheets
     - a sheet per document phrasing variant named after the document (FLEX, CS_E_50, ECSS_E60-30, TSS, EVS) and 5 random groups (Random1, ..)
 	and the respective template System (free, EARS, MASTER, AdvEARS, boilerplates (DODT), SPIDER) 
-	as "document name" + "template name" and one "Empty Sheet" as a template for extension. 
+	as "document name" + "template name". 
 	Each such sheet contains
       - one row per requirement with its id, text and 54 assessed quality metrics, e.g., # counts and ? bools 1-positive/0-negative, (17 manually, 20 Excel formula, 17 by Python script from auxiliary file)
       - a header with 78 aggregated metrics for the whole requirement set, e.g., Σ sums and Ø averages (1 by Python script from auxiliary file, 12 manual from readability tool, 65 Excel formula)
     - "Summary" sheet summarizing the metrics per set in a comapartive overview together with averages and other statistical values   
-    - "Summary effects" sheet summarizing the metrics effect sizes and significance per set in a comapartive overview
-    - "radar charts" sheet containing 62 radar charts for all none-auxiliary metrics  
-    - "all *" sheets that aggregate the header values over all requirements per notartion (free, EARS, MASTER, AdvEARS, boilerplates (DODT), SPIDER) 
+    - "Summary effects" sheet summarizing the metrics effect sizes and significance per set in a comapartive overview  
+    - "all *" sheets that aggregate the header values over all requirements per notation (free, EARS, MASTER, AdvEARS, boilerplates (DODT), SPIDER)
+    - "RandomDistribution" sheet where the requirements are reshuffled to their random groups based on random numbers
+    - "radar charts" sheet containing 62 radar charts for all none-auxiliary metrics
+    - "plot req increase" sheet to gernerate bar chart on increase in total numner of requirements
     - "Reading box plots" sheet with box-and-whisker plots for readability metrics (with respectively re-arranged data from the summary sheet)
     - "Quality box plots" sheet with box-and-whisker plots for percentage-based quality metrics (with respectively re-arranged data from the summary sheet)
     - "Spearman Correl" sheet with a correlation matrix for spearman rank correlation over all metrics in the summary sheet (n=30, values significant at α=0.01 in green, α=0.05 in yellow)
@@ -63,7 +66,7 @@ The repository contains two folders:
 ## System Requirements 
 
  
-- For .xlsx data files: Microsoft Ecxel 2016 or newer 
+- For .xlsx data files: Microsoft Excel 2016 or newer 
 - For .pdf files: A PDF reader
 - For metric (re-)calculation: Python + Jupyter Notebook (e.g. via Anaconda for Python) with the following libraries:
   - pandas 
@@ -89,7 +92,7 @@ Below, you will find links to instructions on how to install:
 - [Adobe Reader](https://helpx.adobe.com/acrobat/kb/install-reader-dc-windows.html)
 - [Anaconda](https://docs.anaconda.com/anaconda/install/windows/) 
 - [NLTK](https://www.nltk.org/install.html) 
-  - uncommend the line in cell 1 after import of NLTK to specify which models to download
+  - uncomment the line in cell 1 after import of NLTK to specify which models to download
 - [spaCy](https://spacy.io/usage#installation) 
   - download trained pipelines "en_core_web_sm" and "en_core_web_lg"
 - [readability](https://pypi.org/project/readability/) 
@@ -100,8 +103,8 @@ Below, you will find links to instructions on how to install:
 
 ## Usage Instructions 
 
-The data within TemplateComparisonAnalytics.xlsx can be used to compare different template systems used to phrase the different variants of requirements documents among each other. It can be used to find differences and pecurlarities with respect to the metrics selected for the quality factors relevant for template systems.
-Further, the data can also be used to validate these metrics and in particlar the guideline rules behind them, e.g., through analysis of dependencies among metrics.
+The data within TemplateComparisonAnalytics.xlsx can be used to compare different template systems used to phrase the different variants of requirements documents among each other. It can be used to find differences and peculiarities with respect to the metrics selected for the quality factors relevant for template systems.
+Further, the data can also be used to validate these metrics and in particular the guideline rules behind them, e.g., through analysis of dependencies among metrics.
 The requirements samples can also be extracted and used for other analysis on the requirement texts. Similar, the metrics can also be used with other requirements, to extend the analysis. 
 
 The following columns in "TemplateComparisonAnalytics.xlsx" are updated through workbook links from "TemplateComparison_calculatedMetrics.xlsx":
@@ -125,7 +128,7 @@ The following columns in "TemplateComparisonAnalytics.xlsx" are updated through 
 - "value_tolerance? (R35)" 
 - "F-Score"
 
-The two files should be in the same folder. As Excel stores absolute paths, the workbooklinks in "TemplateComparisonAnalytics.xlsx" have to be refreshed after download (Data -> Workbook Links -> Refresh, select the "TemplateComparison_calculatedMetrics.xlsx" file at its new location). 
+The two files should be in the same folder. As Excel stores absolute paths, the workbook links in "TemplateComparisonAnalytics.xlsx" have to be refreshed after download (Data -> Workbook Links -> Refresh, select the "TemplateComparison_calculatedMetrics.xlsx" file at its new location). 
 
 If requirements texts are changed/new ones added, “Quality metrics.ipynb” needs to be run to update these values. Follow "Steps to Reproduce" for this.
 
@@ -152,7 +155,7 @@ To reproduce the whole experiment,
 	- "clear_preconditions? (R37)"
 	- "clear_business_logic? (R38)"
 	- "clear subject? (R39)"
-4. Calculate the redability metrics with an external tool (e.g., [https://readabilityformulas.com](https://readabilityformulas.com)) and enter the results to the respective header cells named after the metric (again marked in italic). Copy for this the colum with the requirements texts and enter this input to the tool. 
+4. Calculate the readability metrics with an external tool (e.g., [https://readabilityformulas.com](https://readabilityformulas.com)) and enter the results to the respective header cells named after the metric (again marked in italic). Copy for this the column with the requirements texts and enter this input to the tool. 
 5 In case of use of random group sheets, update the references to the respective randomly assigned requirements on the original phrasing sheets and also process 4. for these random group texts 
 5. To calculate the remaining metrics with the Python script, follow the next steps:
 
@@ -174,14 +177,15 @@ Output: The "TemplateComparison_calculatedMetrics.xlsx" document in the Data fol
 
 If you want to extend the document and add more data for analysis, do the following:
 
-- Clone a sheet from the "empty sheet" sheet of the TemplateComparisonAnalytics.xlsx document. 
+- Clone a sheet from the "Document TemplateSystem" sheets of the TemplateComparisonAnalytics.xlsx document and delete/replace requiremnt rows (keep formulas and format). 
 - Give a meaningful name for the sheet. The presented document uses the following notation for this: "document name" + "template name". If requirements are written in a free form, "template name" is equal to "free". 
 - Adjust references in links and formula to the new name (e.g., STRG+F)
 - Add necessary requirements from the selected requirement document to the "Text" column: one requirement per row. 
 - Fill the "ID" and "name_of_template" columns if appropriate for your comparison. 
 - Assess the requirements for the presented quality metrics. 
 - Assess the requirements for the presented readability score metrics if applicable.
-- Adjust links and references in formula to sheet names on the summary sheets to get overview.
+- If you add several new sheets (new requirement set for several template systems or new template system for all sets) clone a summary sheet and adjust accordingly
+- Add/Adjust links and references in formula to sheet names on the summary sheets to get overview.
 - Some metrics can be evaluated by python code. To learn how to do this, take a look above.
   - The respective sheet needs to be added also within the TemplateComparison_calculatedMetrics.xlsx document and the sheet name adapted in the workbook links on the sheet.
 
