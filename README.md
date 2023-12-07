@@ -26,13 +26,16 @@ The repository contains different artifacts:
   -  **Tool support** for metric calculation
   -  Calculated + manually evaluated metric **values for the given requirement corpus**
   -  Statistics and charts for metric analysis
-- A corpus of two natural language requirements re-written by 43 test subjects following "Easy Approach to Requirements Syntax (EARS)" and "Mustergültige Anforderungen - Das SOPHIST Templates für Requirements (MASTeR)" respectively
+- A corpus of two natural language requirements **re-written by 43 test subjects** following "Easy Approach to Requirements Syntax (EARS)" and "Mustergültige Anforderungen - Das SOPHIST Templates für Requirements (MASTeR)" respectively
+- A **questionnaire for user experiments** in comparative reading and writing of requirements following "Easy Approach to Requirements Syntax (EARS)" and "Mustergültige Anforderungen - Das SOPHIST Templates für Requirements (MASTeR)"
+- The **data set of user responses** to the questionnaire for 43 subjects
+- An **expressiveness evaluation** consiting of three individual expert mappings of the meta-models of the above introduced five template systems to the [Bunge-Wand-Weber refrence ontology (BWW)](https://doi.org/10.1111/j.1365-2575.1993.tb00127.x), as well as a consolidated consens mapping with calculation of ontological expressiveness metrics
 
 
 
 ## Description of Artifact 
 
-The repository contains three folders: 
+The repository contains four folders: 
 
 - Source: Python code (Quality metrics.ipynb) to evaluate 19 particular metrics, details under "Usage Instructions". 
 - Data: contains the files with the actual data
@@ -62,7 +65,8 @@ The repository contains three folders:
     - and additional sheets with aggregated bar charts over all qualities per document (FLEX, CS_E_50, ECSS_E60-30, TSS, EVS)
 
   - TemplateComparison_calculatedMetrics.xlsx, an auxiliary file contains requirement quality metric results from the Python script
-- UserTestEval: Application of the above described metric suite in Python/Excel to test subject written requirements. Contains again "Source" and "Data" folders with simplified versions of the above described script and .xlsx files (without random groups, sorted not by document but test subject background)
+- UserTestEval: Application of the above described metric suite in Python/Excel to test subject written requirements. Contains again "Source" and "Data" folders with simplified versions of the above described script and .xlsx files (without random groups, sorted not by document but test subject background). Further, "Rawdata.xlsx" with participant response dataset and analysis + 2 pdfs with questionnaires that also concern reading tasks.
+- BWWMapping: Contains the evaluation of the ontological expressiveness of five different template systems. "BWW.xlsx" contains a definition of the concepts from the BWW reference ontology and example mappings from related work. Files "Mapping_X.xlsx" contain individual expert mappings, "Mapping_Agreement.xlsx" the heat-map of agreement between the individual mappings, while "Mapping_Consens_Agreement.xlsx" contains the consolidated mapping after a group discussion of all involved mappers with 100% agreement.
  
 
 
@@ -176,6 +180,8 @@ Output: The "TemplateComparison_calculatedMetrics.xlsx" document in the Data fol
 6. Check all 0 values in "TemplateComparison_calculatedMetrics.xlsx" for false positives, in particular "no_comparison? (R13)", "units? (R16)", and "value_tolerance? (R35)", and potentially manually change them to 1
 
 Generally the same procedure applies for the data in "UserTestEval"
+
+All other data serves as raw data to reproduce or comprehend experiments decribed in our publications. The questionnaires can be used to conduct similar user studies, while with "Mapping.xlsx" we provide a template to perform an independent BWW meta-model mapping, the agreement spreatsheets could be used for analysis, if workbooklinks are updated accordingly.
  
 
 ### Steps to extend the analysis 
@@ -204,7 +210,7 @@ If you would like to evaluate more metrics via code, do the following:
 
 ## Related Publications
 
-- Katharina Großer, Marina Rukavitsyna, Jan Jürjens. "A Comparative Evaluation of RequirementTemplate Systems", In: 31st IEEE International Requirements Engineering Conference (RE'23), 2023
+- Katharina Großer, Marina Rukavitsyna, Jan Jürjens. "A Comparative Evaluation of RequirementTemplate Systems", In: 31st IEEE International Requirements Engineering Conference (RE'23), 2023, DOI: [10.1109/RE57278.2023.00014](https://doi.org/10.1109/RE57278.2023.00014).
 
 Related Student Thesis
 - Marina Rukavitsyna. "Linguistic comparative evaluation of template-systems for requirements documentation". Master's thesis. University of Koblenz-Landau, 2021.
@@ -213,13 +219,13 @@ Related Student Thesis
 
 ## How to Cite
 
-Katharina Großer, Marina Rukavitsyna, Jan Jürjens. "Evaluation of Templates for Requirements Documentation: Data-set and Sources", 2023, DOI: 10.5281/zenodo.8020672.
+Katharina Großer, Marina Rukavitsyna, Amir Shayan Ahmadian, Qusai Ramadan, Jan Jürjens. "Evaluation of Templates for Requirements Documentation: Data-set and Sources", 2023, DOI: [10.5281/zenodo.8020672](https://doi.org/10.5281/zenodo.8020672).
 
 ## License
 
 Software under MIT License
 
-Copyright (c) 2022-2023 Katharina Großer, Marina Rukavitsyna, Jan Jürjens
+Copyright (c) 2022-2023 Katharina Großer, Marina Rukavitsyna, Amir Shayan Ahmadian, Qusai Ramadan, Jan Jürjens
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
