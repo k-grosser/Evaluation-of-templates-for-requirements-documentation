@@ -39,8 +39,7 @@ The repository contains four folders:
 
 - Source: Python code (Quality metrics.ipynb) to evaluate 19 particular metrics, details under "Usage Instructions". 
 - Data: contains the files with the actual data
-  -  metric_definitions_and_results.pdf, detailed definition tables for quality metrics and data items, as well as underlying guideline rules (+ comparison of five phrasing guidelines), explanations of statistical interpretations, and results in effects sizes comparing the five template systems with free text.
-  -  two sunburst diagrams "QualityAttributes.png" and "RulesPerGuideline.png" illustrating the attribution of evaluated metrics to quality attributes and the conformance to phrasing guidelines as described in "metric_definitions_and_results.pdf"
+  -  metric_definitions.pdf, detailed definition tables for quality metrics and data items, as well as analysis results that establish the ground truth for a quality review of four sample requiremts phrased in different notations (free, EARS, MASTER)  -  two sunburst diagrams "QualityAttributes.png" and "RulesPerGuideline.png" illustrating the attribution of evaluated metrics to quality attributes and the conformance to phrasing guidelines as described in "metric_definitions_and_results.pdf"
   - TemplateComparisonAnalytics.xlsx, the workbook contains several different data sheets
     - a sheet per document phrasing variant named after the document (FLEX, CS_E_50, ECSS_E60-30, TSS, EVS) and 5 random groups (Random1, ..)
 	and the respective template System (free, EARS, MASTER, AdvEARS, boilerplates (DODT), SPIDER) 
@@ -48,8 +47,10 @@ The repository contains four folders:
 	Each such sheet contains
       - one row per requirement with its id, text and 54 assessed quality metrics, e.g., # counts and ? bools 1-positive/0-negative, (17 manually, 20 Excel formula, 17 by Python script from auxiliary file)
       - a header with 78 aggregated metrics for the whole requirement set, e.g., Σ sums and Ø averages (1 by Python script from auxiliary file, 12 manual from readability tool, 65 Excel formula)
-    - "Summary" sheet summarizing the metrics per set in a comapartive overview together with averages and other statistical values   
+    - "Summary" sheet summarizing the metrics per document set in a comapartive overview together with averages and other statistical values   
+    - "Summary Random" sheet same as "Summary" but with values per random group
     - "Summary effects" sheet summarizing the metrics effect sizes and significance per set in a comapartive overview  
+    - "Overview *" sheets aggregate effect sizes, effect size categories, and statistical significance for respective metric sets (all, per quality characteristic, per guideline) and calculate the mean effect sizes per set
     - "all *" sheets that aggregate the header values over all requirements per notation (free, EARS, MASTER, AdvEARS, boilerplates (DODT), SPIDER)
     - "RandomDistribution" sheet where the requirements are reshuffled to their random groups based on random numbers
     - "radar charts" sheet containing 62 radar charts for all none-auxiliary metrics
@@ -57,7 +58,6 @@ The repository contains four folders:
     - "Reading box plots" sheet with box-and-whisker plots for readability metrics (with respectively re-arranged data from the summary sheet)
     - "Quality box plots" sheet with box-and-whisker plots for percentage-based quality metrics (with respectively re-arranged data from the summary sheet)
     - "Spearman Correl" sheet with a correlation matrix for spearman rank correlation over all metrics in the summary sheet (n=30, values significant at α=0.01 in green, α=0.05 in yellow)
-    - "Pearson Correl" sheet with a correlation matrix for pearson correlation over all metrics in the summary sheet (significant values in green, however not applicable as most values are not normally distributed)
     - "Readability bar charts indiv" sheet with bar charts of readability metrics
     - "Readability bar charts all" sheet with aggregated bar charts of readability metrics
     - "Quality Line charts" sheet with line charts of percentage-based quality metrics
