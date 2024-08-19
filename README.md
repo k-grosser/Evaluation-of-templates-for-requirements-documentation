@@ -211,6 +211,7 @@ If you would like to evaluate more metrics via code, do the following:
 ## Related Publications
 
 - Katharina Großer, Marina Rukavitsyna, Jan Jürjens. "A Comparative Evaluation of RequirementTemplate Systems", In: 31st IEEE International Requirements Engineering Conference (RE'23), 2023, DOI: [10.1109/RE57278.2023.00014](https://doi.org/10.1109/RE57278.2023.00014). (version of this repository that belongs to this publication:  [https://doi.org/10.5281/zenodo.8123777](https://doi.org/10.5281/zenodo.8123777))
+- Katharina Großer, Amir Shayan Ahmadian, Marina Rukavitsyna, Qusai Ramadan and Jan Jürjens. Benchmarking requirement template systems: comparing appropriateness, usability, and expressiveness. Requirements Eng (2024). DOI: [10.1007/s00766-024-00427-0](https://doi.org/10.1007/s00766-024-00427-0)
 
 Related Student Thesis
 - Marina Rukavitsyna. "Linguistic comparative evaluation of template-systems for requirements documentation". Master's thesis. University of Koblenz-Landau, 2021.
